@@ -86,6 +86,7 @@ watch(() => route.params.id, () => {
         v-for="item in messages"
         :key="item.id"
         :content="item.text"
+        :user-name="item.user.name"
         :side="item.userId === user?.id ? 'right' : 'left'"
       />
     </div>

@@ -7,6 +7,9 @@ export type MessageType = {
   chatId: string,
   userId: number,
   text: string,
+  user: {
+    name: string,
+  }
 }
 
 const getList = async (chatAddress: string): Promise<AxiosResponse<MessageType[]>> => {

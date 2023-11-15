@@ -1,5 +1,6 @@
 <script setup lang="ts">
 type Props = {
+  userName: string,
   content: string,
   side: 'left' | 'right'
 }
@@ -13,6 +14,9 @@ defineProps<Props>();
     :class="side"
   >
     <div class="message-item">
+      <div class="message-title">
+        {{ userName }}
+      </div>
       {{ content }}
     </div>
   </div>
@@ -35,6 +39,10 @@ defineProps<Props>();
     @apply min-h-[40px] max-w-[100%];
     @apply bg-white dark:bg-gray-600 rounded-md break-all;
     @apply p-2 shadow-md dark:text-white;
+
+    .message-title {
+      @apply text-sm font-semibold;
+    }
   }
 }
 </style>

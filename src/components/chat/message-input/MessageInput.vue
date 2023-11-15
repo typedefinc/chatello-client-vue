@@ -66,7 +66,7 @@ const enterDownHandler = (event: KeyboardEvent) => {
     @apply dark:bg-gray-700 dark:text-white;
     @apply rounded-md outline-none;
     @apply p-2 text-[14px] min-h-[40px] max-h-[190px];
-    @apply overflow-y-scroll;
+    @apply overflow-y-scroll break-all;
 
     resize: none;
 
